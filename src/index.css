@@ -341,14 +341,18 @@ main.light .footer {
 }
 
 a {
-    color: black;
+    color: white;
     font-size: .7rem;
+}
+main.light a {
+    color: black;
 }
 
 @media screen and (max-width: 550px) {
     .container {
         width: 100%;
         padding: 0 1.2rem;
+        margin-top: 2rem;
     }
     .image {
         height: 30vh;
@@ -379,8 +383,9 @@ a {
         height: 1rem;
         cursor: pointer;
     }
-    a {
-        display: none;
+    .tag {
+        padding-top: 1rem;
+        text-align: center;
     }
 }
 
@@ -400,14 +405,7 @@ a {
     .circle-input {
         font-size: 16px;
     }
-    span {
-        font-size: 18px;
-    }
-    .checkmark {
-        width: 1.4rem;
-        height: 1.4rem;
-    }
-    .checkmark-fin {
+    .checkmark, .checkmark-fin {
         width: 1.4rem;
         height: 1.4rem;
     }
