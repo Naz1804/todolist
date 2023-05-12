@@ -105,9 +105,7 @@ function App() {
     
     return (
         <main className={lightMode ? "light" : ""}>
-           <div className="image">
-            <a target="_blank" href="https://icons8.com/icon/48003/done">Check Logo</a><a target="_blank" href="https://icons8.com"> by Icons8</a>
-           </div>
+           <div className="image"></div>
             <div className="container">
              <header>
                 <h1>Todo</h1>
@@ -129,6 +127,7 @@ function App() {
                 />
                 {tabs && <Tab count={count} handleRemove={handleRemove} handleFilter={handleFilter} filter={filter} />}
              </section>
+             {tabs && <div className="tag"><a target="_blank" href="https://icons8.com/icon/48003/done">Check Logo</a><a target="_blank" href="https://icons8.com"> by Icons8</a></div>}
              </div>
         </main>
     )
