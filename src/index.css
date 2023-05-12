@@ -89,6 +89,7 @@ main.light .theme-mode {
     background: transparent;
     border: 1px solid hsl(233, 14%, 35%);
     transform: translateY(-50%);
+    transition: border 1s ease-in-out;
 }
 main.light .input-wrap::before {
     border: 1px solid hsl(233, 11%, 84%)
@@ -136,7 +137,7 @@ li {
     align-items: center;
     border-bottom: 1px solid hsl(233, 14%, 35%);
     text-transform: capitalize;
-    transition: all 1s ease-in;
+    transition: all 1s ease-in-out;
 }
 li:hover {
     color: hsl(236, 33%, 92%);
@@ -164,10 +165,12 @@ li:first-child {
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;
+    transition: border 1s ease-in-out;
 }
 .checkmark:hover {
     border: 1px solid hsl(220, 98%, 61%);
     border-radius: 50%;
+    transition: all .1s ease-in;
 }
 main.light .checkmark {
     border: 1px solid hsl(233, 11%, 84%);
@@ -335,6 +338,7 @@ main.light .sml-tabs-btn {
     color: hsl(233, 14%, 35%);
     text-align: center;
     padding-top: 2rem;
+    transition: all 1s ease-in-out;
 }
 main.light .footer {
     color: hsl(235, 21%, 11%);
@@ -343,6 +347,7 @@ main.light .footer {
 a {
     color: white;
     font-size: .7rem;
+    transition: all 1s ease-in-out;
 }
 main.light a {
     color: black;
