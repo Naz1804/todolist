@@ -340,6 +340,11 @@ main.light .footer {
     color: hsl(235, 21%, 11%);
 }
 
+a {
+    color: black;
+    font-size: .7rem;
+}
+
 @media screen and (max-width: 550px) {
     .container {
         width: 100%;
