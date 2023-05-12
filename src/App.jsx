@@ -105,7 +105,9 @@ function App() {
     
     return (
         <main className={lightMode ? "light" : ""}>
-           <div className="image"></div>
+           <div className="image">
+            <a target="_blank" href="https://icons8.com/icon/48003/done">Check Logo</a><a target="_blank" href="https://icons8.com"> by Icons8</a>
+           </div>
             <div className="container">
              <header>
                 <h1>Todo</h1>
@@ -131,23 +133,4 @@ function App() {
         </main>
     )
 }
-
 export default App
-
-
-
-//learnt .findindex, caret-color
-
-/*
-<ul>
-    {filteredTodos.map((todo) => (
-        <li key={todo.id}>
-            <button className={todo.completed ? "checkmark-fin" : "checkmark"} onClick={() => handleTodoClick(todo.id)}/>
-            <span className={todo.completed ? "completed" : ""}>{todo.text}</span>
-            <button className="delete-btn" onClick={() => handleDeleteClick(todo.id)}/>
-        </li>
-    ))}
-</ul>
-*/
-
-//<a target="_blank" href="https://icons8.com/icon/48003/done">Check</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
