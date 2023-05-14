@@ -1,4 +1,4 @@
-export default function List({filteredTodos, handleTodoClick, handleDeleteClick, handleDrop, handleDragStart, handleDragOver, handleTouchStart, handleTouchMove, handleTouchEnd}) {
+export default function List({filteredTodos, handleTodoClick, handleDeleteClick, handleDrop, handleDragStart, handleDragOver}) {
     return (
         <ul>
             {filteredTodos.map((todo, index) => (
@@ -8,8 +8,6 @@ export default function List({filteredTodos, handleTodoClick, handleDeleteClick,
                     onDragStart={(event) => handleDragStart(event, index)}
                     onDragOver={(event) => handleDragOver(event, index)}
                     onDrop={(event) => handleDrop(event, index)}
-                    onTouchStart={(event) => handleTouchStart(event, index)}
-                    onTouchEnd={handleTouchEnd}
                 >
                     <button className={todo.completed ? "checkmark-fin" : "checkmark"} onClick={() => handleTodoClick(todo.id)}/>
                     <span className={todo.completed ? "completed" : ""}>{todo.text}</span>

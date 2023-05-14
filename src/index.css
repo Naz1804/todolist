@@ -353,6 +353,12 @@ main.light a {
     color: black;
 }
 
+@media screen and (max-width: 768px) {
+    .footer {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .container {
         width: 100%;
