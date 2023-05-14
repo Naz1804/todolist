@@ -14,6 +14,14 @@ function App() {
 
     const [draggedItemIndex, setDraggedItemIndex] = useState(null);
     const [dragOverItemIndex, setDragOverItemIndex] = useState(null);
+    const [isDragging, setIsDragging] = useState(false);
+    const [dragIndex, setDragIndex] = useState(null);
+    const [startX, setStartX] = useState(0);
+    const [startY, setStartY] = useState(0);
+    const [endX, setEndX] = useState(0);
+    const [endY, setEndY] = useState(0);
+    const [direction, setDirection] = useState('')
+
 
     function toggleLightMode() {
         setLightMode(!lightMode)
@@ -92,6 +100,51 @@ function App() {
         setDragOverItemIndex(index);
     };
 
+    function getDirection(startX, startY, endX, endY) {
+        const deltaX = startX - endX;
+        const deltaY = startY - endY;
+        const absDeltaX = Math.abs(deltaX);
+        const absDeltaY = Math.abs(deltaY);
+        let direction = null;
+
+        if (absDeltaX > 30 || absDeltaY > 30) {
+          if (absDeltaX > absDeltaY) {
+            direction = deltaX > 0 ? "left" : "right";
+          } else {
+            direction = deltaY > 0 ? "up" : "down";
+          }
+        }
+
+        return direction;
+    }
+    const handleTouchStart = (event, index) => {
+        setDraggedItemIndex(index);
+        setStartX(event.touches[0].clientX);
+        setStartY(event.touches[0].clientY);
+    };
+    const handleTouchMove = (event) => {
+        event.preventDefault();
+        setEndX(event.touches[0].clientX);
+        setEndY(event.touches[0].clientY);
+        const newDirection = getDirection(startX, startY, endX, endY);
+        setDirection(newDirection);
+    };
+    const handleTouchEnd = (event, index) => {
+        event.preventDefault();
+        setIsDragging(false);
+        const newFilteredTodos = [...todos];
+        const draggedItem = newFilteredTodos[draggedItemIndex];
+        newFilteredTodos.splice(draggedItemIndex, 1);
+        if (direction === 'right') {
+          newFilteredTodos.splice(draggedItemIndex - 1, 0, draggedItem);
+        } else if (direction === 'left') {
+          newFilteredTodos.splice(draggedItemIndex + 1, 0, draggedItem);
+        } else {
+          newFilteredTodos.splice(dragIndex, 0, draggedItem);
+        }
+        setTodos(newFilteredTodos);
+        setDirection('');
+    };
 
     function loadTodosFromLocalStorage() {
         const todos = localStorage.getItem('todos');
@@ -123,6 +176,9 @@ function App() {
                    handleDrop={handleDrop} 
                    handleDragStart={handleDragStart} 
                    handleDragOver={handleDragOver} 
+                   handleTouchStart={handleTouchStart}
+                   handleTouchMove={handleTouchMove}
+                   handleTouchEnd={handleTouchEnd}
                 />
                 {tabs && <Tab count={count} handleRemove={handleRemove} handleFilter={handleFilter} filter={filter} />}
              </section>
