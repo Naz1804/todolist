@@ -11,7 +11,7 @@ This is a simple todo app built using React and vite. The app allows users to cr
 # Installation
 First thing first is you need `node.js` installed. Use this _[Link](https://nodejs.org/)_ to be sent to the `node.js` downloads.
 
-Then you can clone the code locally by copying the `HTTPS` from the `Code </>` button and paste on to your code editor.
+Then you can clone the code locally by copying the `HTTPS` from the `<> Code` button and paste on to your code editor.
 
 To install the dependencies, run the following command in your terminal:
 
