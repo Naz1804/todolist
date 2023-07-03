@@ -24,11 +24,10 @@ Then:
 ```sh
 npm run dev
 ```
-![image](https://github.com/Naz1804/todolist/assets/121124109/0705a659-a4a0-4439-881f-d0ccd5869761)
 
 Next you will see this:
 
-![image](https://github.com/Naz1804/todolist/assets/121124109/50104d9a-ef85-4d9e-8262-48a0c7fafcd7)
+![image](https://github.com/Naz1804/todolist/assets/121124109/10254502-15b6-43a2-b1dc-ede50c3cd804)
 
 You have two options to either click on the `http://localhost:5173` or press `o` to open up the `localhost`.
 
@@ -36,4 +35,5 @@ You can always press `h` to see what more commands that will help you code.
 
 ## Finally you have the project running !!
 
-![image](https://github.com/Naz1804/todolist/assets/121124109/c7598f4d-0a67-4cd0-9f28-8acbd76ee46b)
+![image](https://github.com/Naz1804/todolist/assets/121124109/debcb3c9-9c02-47e2-9db4-e43e671f6c99)
+
