@@ -13,6 +13,9 @@ First thing first is you need `node.js` installed. Use this _[Link](https://node
 
 Then you can clone the code locally by copying the `HTTPS` from the `<> Code` button and paste on to your code editor.
 
+![image](https://github.com/Naz1804/todolist/assets/121124109/220ab00c-5734-43c9-9592-9b408d66972d)
+
+
 To install the dependencies, run the following command in your terminal:
 
 ```sh
