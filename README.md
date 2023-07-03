@@ -29,7 +29,7 @@ Next you will see this:
 
 ![image](https://github.com/Naz1804/todolist/assets/121124109/10254502-15b6-43a2-b1dc-ede50c3cd804)
 
-You have two options to either click on the `http://localhost:5173` or press `o` to open up the `localhost`.
+You have two options to either click on the `http://localhost:5173/` or press `o` to open up the `localhost`.
 
 You can always press `h` to see what more commands that will help you code.
 
